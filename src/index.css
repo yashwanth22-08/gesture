@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .bg-space-dark {
+    background-color: #0A0C10;
+    background-image: 
+      radial-gradient(circle at 50% 30%, rgba(0, 240, 255, 0.08) 0%, transparent 60%),
+      radial-gradient(circle at 80% 80%, rgba(255, 42, 42, 0.05) 0%, transparent 50%),
+      linear-gradient(to bottom, rgba(10, 12, 16, 0.95), rgba(5, 7, 10, 0.98));
+  }
+
+  .hud-grid-bg {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(0, 240, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 240, 255, 0.04) 1px, transparent 1px);
+  }
+
+  .hud-scanline {
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0),
+      rgba(0, 240, 255, 0.05) 50%,
+      rgba(255,255,255,0)
+    );
+    background-size: 100% 8px;
+  }
+
+  .glass-panel {
+    background: rgba(10, 15, 25, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 240, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+  }
+
+  .glass-panel-interactive {
+    background: rgba(10, 15, 25, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 240, 255, 0.25);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-panel-interactive:hover {
+    background: rgba(15, 24, 40, 0.85);
+    border-color: rgba(0, 240, 255, 0.6);
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.25);
+  }
+
+  .glass-panel-ultron {
+    background: rgba(25, 8, 12, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 42, 42, 0.35);
+    box-shadow: 0 0 30px rgba(255, 42, 42, 0.25);
+  }
+
+  .glass-button {
+    background: rgba(0, 240, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 240, 255, 0.25);
+  }
+
+  .glass-button-primary {
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.3), rgba(0, 140, 255, 0.4));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 240, 255, 0.6);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.35);
+  }
+
+  .glass-button-primary:hover {
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.5), rgba(0, 160, 255, 0.6));
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.6);
+  }
+
+  .glass-button-crimson {
+    background: linear-gradient(135deg, rgba(255, 42, 42, 0.3), rgba(180, 0, 0, 0.4));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 42, 42, 0.6);
+    box-shadow: 0 0 20px rgba(255, 42, 42, 0.35);
+  }
+
+  .glass-button-crimson:hover {
+    background: linear-gradient(135deg, rgba(255, 42, 42, 0.5), rgba(220, 0, 0, 0.6));
+    box-shadow: 0 0 30px rgba(255, 42, 42, 0.6);
+  }
+
+  .glow-text-cyan {
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.7), 0 0 20px rgba(0, 240, 255, 0.4);
+  }
+
+  .glow-text-crimson {
+    text-shadow: 0 0 10px rgba(255, 42, 42, 0.8), 0 0 20px rgba(255, 42, 42, 0.5);
+  }
+
+  .glow-text-amber {
+    text-shadow: 0 0 10px rgba(255, 176, 0, 0.8), 0 0 20px rgba(255, 176, 0, 0.5);
+  }
+
+  .gesture-indicator-glow {
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
+  }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse-slow {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes pulse-cyan {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3), inset 0 0 15px rgba(0, 240, 255, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(0, 240, 255, 0.7), inset 0 0 30px rgba(0, 240, 255, 0.5);
+    transform: scale(1.03);
+  }
+}
+
+@keyframes pulse-crimson {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(255, 42, 42, 0.4), inset 0 0 20px rgba(255, 42, 42, 0.3);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(255, 42, 42, 0.9), inset 0 0 40px rgba(255, 42, 42, 0.7);
+    transform: scale(1.05);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 18s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spin-reverse-slow 12s linear infinite;
+}
+
+.animate-pulse-cyan {
+  animation: pulse-cyan 3s infinite ease-in-out;
+}
+
+.animate-pulse-crimson {
+  animation: pulse-crimson 1.5s infinite ease-in-out;
+}
+
+body {
+  background-color: #0A0C10;
+  color: #F0F4F8;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+

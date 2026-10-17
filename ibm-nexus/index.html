@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IBM NEXUS — Hack. Defend. Innovate.</title>
+  <meta name="description" content="IBM NEXUS is a college technical club focused on cybersecurity, hackathons, CTF competitions, and workshops. Join us to hack, defend, and innovate." />
+  <meta name="keywords" content="IBM NEXUS, cybersecurity club, hackathon, CTF, capture the flag, workshops, college tech club" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">[</span>IBM<span class="logo-accent"> NEXUS</span><span class="logo-bracket">]</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#events" class="nav-link">Events</a></li>
+        <li><a href="#leaderboard" class="nav-link">Leaderboard</a></li>
+        <li><a href="#team" class="nav-link">Team</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#join" class="nav-link nav-link-cta">Join Us</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-circuit-lines"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>CYBERSECURITY &amp; INNOVATION CLUB</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line">IBM</span>
+        <span class="title-line title-accent">NEXUS</span>
+      </h1>
+      <p class="hero-tagline">Hack<span class="tagline-dot">.</span> Defend<span class="tagline-dot">.</span> Innovate<span class="tagline-dot">.</span></p>
+
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">nexus@ibm:~$</span>
+        </div>
+        <div class="terminal-body">
+          <span class="terminal-prompt">~/nexus&gt;</span>
+          <span class="terminal-text" id="typingText"></span>
+          <span class="terminal-cursor">_</span>
+        </div>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="#join" class="btn btn-primary">
+          <span class="btn-icon">⚡</span> Join the Club
+        </a>
+        <a href="#events" class="btn btn-outline">
+          <span class="btn-icon">📅</span> View Upcoming Events
+        </a>
+      </div>
+
+      <div class="hero-scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>SCROLL</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ ABOUT ═══════════════ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-tag">&lt;about&gt;</span>
+        <h2 class="section-title">Who We Are</h2>
+        <p class="section-subtitle">Bridging the gap between curiosity and cybersecurity excellence</p>
+      </div>
+
+      <div class="about-grid" data-animate>
+        <div class="about-text">
+          <h3 class="about-heading">Our Mission</h3>
+          <p>IBM NEXUS is the premier cybersecurity and technical innovation club, dedicated to empowering students with hands-on experience in offensive &amp; defensive security, ethical hacking, and competitive programming.</p>
+          <p>From capture-the-flag competitions to industry workshops and bug bounty programs, we build the next generation of security professionals.</p>
+          <div class="about-features">
+            <div class="feature-item">
+              <span class="feature-icon">🛡️</span>
+              <div>
+                <strong>Hackathons &amp; CTFs</strong>
+                <p>Compete in national and international cybersecurity competitions</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🔬</span>
+              <div>
+                <strong>Security Research</strong>
+                <p>Explore vulnerability assessment, penetration testing, and forensics</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🎓</span>
+              <div>
+                <strong>Workshops &amp; Training</strong>
+                <p>Hands-on labs covering web security, cryptography, and reverse engineering</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🐛</span>
+              <div>
+                <strong>Bug Bounty Practice</strong>
+                <p>Simulate real-world vulnerability hunting on practice platforms</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-dot red"></span>
+              <span class="code-dot yellow"></span>
+              <span class="code-dot green"></span>
+              <span class="code-filename">nexus_init.py</span>
+            </div>
+            <pre class="code-content"><code><span class="code-keyword">class</span> <span class="code-class">IBMNexus</span>:
+    <span class="code-keyword">def</span> <span class="code-func">__init__</span>(self):
+        self.name = <span class="code-string">"IBM NEXUS"</span>
+        self.focus = [
+            <span class="code-string">"Cybersecurity"</span>,
+            <span class="code-string">"Hackathons"</span>,
+            <span class="code-string">"CTF Competitions"</span>,
+            <span class="code-string">"Workshops"</span>
+        ]
+        self.motto = <span class="code-string">"Hack. Defend. Innovate."</span>
+        self.status = <span class="code-string">"ACTIVE"</span> <span class="code-comment"># Always 🔥</span>
+
+    <span class="code-keyword">def</span> <span class="code-func">recruit</span>(self, student):
+        <span class="code-keyword">if</span> student.passion >= <span class="code-number">100</span>:
+            <span class="code-keyword">return</span> <span class="code-string">"Welcome to NEXUS!"</span>
+
+nexus = IBMNexus()
+nexus.recruit(you)  <span class="code-comment"># Apply now!</span></code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Counter -->
+      <div class="stats-row" data-animate>
+        <div class="stat-card">
+          <div class="stat-number" data-target="250">0</div>
+          <div class="stat-label">Active Members</div>
+          <div class="stat-icon">👥</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="45">0</div>
+          <div class="stat-label">Events Hosted</div>
+          <div class="stat-icon">🎯</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="18">0</div>
+          <div class="stat-label">CTFs Won</div>
+          <div class="stat-icon">🏆</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="30">0</div>
+          <div class="stat-label">Workshops Conducted</div>
+          <div class="stat-icon">🛠️</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ EVENTS ═══════════════ -->
+  <section class="section events" id="events">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-tag">&lt;events&gt;</span>
+        <h2 class="section-title">Events &amp; Competitions</h2>
+        <p class="section-subtitle">Stay updated with our upcoming hackathons, CTFs, and workshops</p>
+      </div>
+
+      <div class="event-filters" data-animate>
+        <button class="filter-btn active" data-filter="all">All Events</button>
+        <button class="filter-btn" data-filter="hackathon">Hackathons</button>
+        <button class="filter-btn" data-filter="ctf">CTF Competitions</button>
+        <button class="filter-btn" data-filter="workshop">Workshops</button>
+        <button class="filter-btn" data-filter="seminar">Seminars</button>
+      </div>
+
+      <div class="events-grid" id="eventsGrid" data-animate>
+        <!-- Event Card 1 -->
+        <div class="event-card" data-category="hackathon">
+          <div class="event-badge hackathon">HACKATHON</div>
+          <div class="event-status upcoming">Upcoming</div>
+          <h3 class="event-title">CyberStorm 2026</h3>
+          <p class="event-desc">24-hour cybersecurity hackathon — build tools, break systems, defend networks.</p>
+          <div class="event-meta">
+            <span class="event-date">📅 Aug 15, 2026</span>
+            <span class="event-difficulty hard">🔴 Advanced</span>
+          </div>
+          <div class="event-countdown" data-date="2026-08-15T09:00:00">
+            <div class="countdown-item"><span class="cd-num" data-days>--</span><span class="cd-label">Days</span></div>
+            <div class="countdown-item"><span class="cd-num" data-hours>--</span><span class="cd-label">Hours</span></div>
+            <div class="countdown-item"><span class="cd-num" data-minutes>--</span><span class="cd-label">Min</span></div>
+            <div class="countdown-item"><span class="cd-num" data-seconds>--</span><span class="cd-label">Sec</span></div>
+          </div>
+          <a href="#join" class="btn btn-primary btn-sm">Register Now</a>
+        </div>
+
+        <!-- Event Card 2 -->
+        <div class="event-card" data-category="ctf">
+          <div class="event-badge ctf">CTF</div>
+          <div class="event-status upcoming">Upcoming</div>
+          <h3 class="event-title">NEXUS CTF v4.0</h3>
+          <p class="event-desc">Jeopardy-style CTF with challenges in pwn, web, crypto, forensics &amp; OSINT.</p>
+          <div class="event-meta">
+            <span class="event-date">📅 Sep 5, 2026</span>
+            <span class="event-difficulty medium">🟡 Intermediate</span>
+          </div>
+          <div class="event-countdown" data-date="2026-09-05T10:00:00">
+            <div class="countdown-item"><span class="cd-num" data-days>--</span><span class="cd-label">Days</span></div>
+            <div class="countdown-item"><span class="cd-num" data-hours>--</span><span class="cd-label">Hours</span></div>
+            <div class="countdown-item"><span class="cd-num" data-minutes>--</span><span class="cd-label">Min</span></div>
+            <div class="countdown-item"><span class="cd-num" data-seconds>--</span><span class="cd-label">Sec</span></div>
+          </div>
+          <a href="#join" class="btn btn-primary btn-sm">Register Now</a>
+        </div>
+
+        <!-- Event Card 3 -->
+        <div class="event-card" data-category="workshop">
+          <div class="event-badge workshop">WORKSHOP</div>
+          <div class="event-status upcoming">Upcoming</div>
+          <h3 class="event-title">Web Exploitation 101</h3>
+          <p class="event-desc">Hands-on workshop on OWASP Top 10, XSS, SQLi, and secure coding practices.</p>
+          <div class="event-meta">
+            <span class="event-date">📅 Aug 22, 2026</span>
+            <span class="event-difficulty easy">🟢 Beginner</span>
+          </div>
+          <div class="event-countdown" data-date="2026-08-22T14:00:00">
+            <div class="countdown-item"><span class="cd-num" data-days>--</span><span class="cd-label">Days</span></div>
+            <div class="countdown-item"><span class="cd-num" data-hours>--</span><span class="cd-label">Hours</span></div>
+            <div class="countdown-item"><span class="cd-num" data-minutes>--</span><span class="cd-label">Min</span></div>
+            <div class="countdown-item"><span class="cd-num" data-seconds>--</span><span class="cd-label">Sec</span></div>
+          </div>
+          <a href="#join" class="btn btn-primary btn-sm">Register Now</a>
+        </div>
+
+        <!-- Event Card 4 -->
+        <div class="event-card" data-category="seminar">
+          <div class="event-badge seminar">SEMINAR</div>
+          <div class="event-status upcoming">Upcoming</div>
+          <h3 class="event-title">Zero Trust Architecture</h3>
+          <p class="event-desc">Industry expert talk on modern enterprise security paradigms and zero trust models.</p>
+          <div class="event-meta">
+            <span class="event-date">📅 Sep 12, 2026</span>
+            <span class="event-difficulty easy">🟢 All Levels</span>
+          </div>
+          <div class="event-countdown" data-date="2026-09-12T16:00:00">
+            <div class="countdown-item"><span class="cd-num" data-days>--</span><span class="cd-label">Days</span></div>
+            <div class="countdown-item"><span class="cd-num" data-hours>--</span><span class="cd-label">Hours</span></div>
+            <div class="countdown-item"><span class="cd-num" data-minutes>--</span><span class="cd-label">Min</span></div>
+            <div class="countdown-item"><span class="cd-num" data-seconds>--</span><span class="cd-label">Sec</span></div>
+          </div>
+          <a href="#join" class="btn btn-primary btn-sm">Register Now</a>
+        </div>
+      </div>
+
+      <!-- Past Events Timeline -->
+      <div class="past-events" data-animate>
+        <h3 class="past-events-title">Past Highlights</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">June 2026</span>
+              <h4>HackDefend 2026</h4>
+              <p>150+ participants, 3 tracks. Winners: Team Cipher (1st), Team ByteForce (2nd).</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">April 2026</span>
+              <h4>NEXUS CTF v3.0</h4>
+              <p>80 teams competed. Top solvers cracked all 25 challenges in under 12 hours.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">February 2026</span>
+              <h4>Cryptography Bootcamp</h4>
+              <p>3-day intensive on AES, RSA, elliptic curves, and hash function attacks.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">January 2026</span>
+              <h4>Red Team vs Blue Team</h4>
+              <p>Live attack-defense simulation. 12 teams battled in real-time network warfare.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ LEADERBOARD ═══════════════ -->
+  <section class="section leaderboard" id="leaderboard">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-tag ctf-tag">&lt;ctf_leaderboard&gt;</span>
+        <h2 class="section-title">CTF Leaderboard</h2>
+        <p class="section-subtitle">Top performers from NEXUS CTF v3.0 — Think you can beat them?</p>
+      </div>
+
+      <div class="leaderboard-wrapper" data-animate>
+        <div class="leaderboard-table-container">
+          <table class="leaderboard-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Team</th>
+                <th>Solved</th>
+                <th>Points</th>
+                <th>Last Solve</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="rank-gold">
+                <td><span class="rank-badge gold">🥇 1</span></td>
+                <td><span class="team-name">Team Cipher</span></td>
+                <td>25/25</td>
+                <td class="points">4,850</td>
+                <td>11h 42m</td>
+              </tr>
+              <tr class="rank-silver">
+                <td><span class="rank-badge silver">🥈 2</span></td>
+                <td><span class="team-name">ByteForce</span></td>
+                <td>23/25</td>
+                <td class="points">4,200</td>
+                <td>14h 15m</td>
+              </tr>
+              <tr class="rank-bronze">
+                <td><span class="rank-badge bronze">🥉 3</span></td>
+                <td><span class="team-name">NullPointers</span></td>
+                <td>22/25</td>
+                <td class="points">3,980</td>
+                <td>16h 03m</td>
+              </tr>
+              <tr>
+                <td><span class="rank-badge">4</span></td>
+                <td><span class="team-name">ShellShock</span></td>
+                <td>20/25</td>
+                <td class="points">3,650</td>
+                <td>18h 30m</td>
+              </tr>
+              <tr>
+                <td><span class="rank-badge">5</span></td>
+                <td><span class="team-name">0xDEADBEEF</span></td>
+                <td>19/25</td>
+                <td class="points">3,400</td>
+                <td>20h 05m</td>
+              </tr>
+              <tr>
+                <td><span class="rank-badge">6</span></td>
+                <td><span class="team-name">RootAccess</span></td>
+                <td>18/25</td>
+                <td class="points">3,100</td>
+                <td>21h 18m</td>
+              </tr>
+              <tr>
+                <td><span class="rank-badge">7</span></td>
+                <td><span class="team-name">SegFaulters</span></td>
+                <td>17/25</td>
+                <td class="points">2,850</td>
+                <td>22h 40m</td>
+              </tr>
+              <tr>
+                <td><span class="rank-badge">8</span></td>
+                <td><span class="team-name">CryptoKnights</span></td>
+                <td>15/25</td>
+                <td class="points">2,500</td>
+                <td>23h 55m</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Practice Challenges -->
+      <div class="practice-section" data-animate>
+        <h3 class="practice-title">Practice Challenges</h3>
+        <div class="practice-grid">
+          <div class="practice-card">
+            <div class="practice-category web">WEB</div>
+            <h4>SQL Injection Lab</h4>
+            <p>Extract the admin credentials from a vulnerable login page.</p>
+            <div class="practice-meta">
+              <span class="practice-points">100 pts</span>
+              <span class="practice-solves">142 solves</span>
+            </div>
+            <a href="#" class="btn btn-outline btn-sm">View Writeup →</a>
+          </div>
+          <div class="practice-card">
+            <div class="practice-category crypto">CRYPTO</div>
+            <h4>RSA Beginner</h4>
+            <p>Decrypt the ciphertext given a weak RSA public key.</p>
+            <div class="practice-meta">
+              <span class="practice-points">150 pts</span>
+              <span class="practice-solves">98 solves</span>
+            </div>
+            <a href="#" class="btn btn-outline btn-sm">View Writeup →</a>
+          </div>
+          <div class="practice-card">
+            <div class="practice-category pwn">PWN</div>
+            <h4>Buffer Overflow 101</h4>
+            <p>Exploit a stack buffer overflow to redirect program execution.</p>
+            <div class="practice-meta">
+              <span class="practice-points">200 pts</span>
+              <span class="practice-solves">67 solves</span>
+            </div>
+            <a href="#" class="btn btn-outline btn-sm">View Writeup →</a>
+          </div>
+          <div class="practice-card">
+            <div class="practice-category forensics">FORENSICS</div>
+            <h4>Memory Dump Analysis</h4>
+            <p>Analyze a RAM dump to find hidden evidence of intrusion.</p>
+            <div class="practice-meta">
+              <span class="practice-points">250 pts</span>
+              <span class="practice-solves">43 solves</span>
+            </div>
+            <a href="#" class="btn btn-outline btn-sm">View Writeup →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ TEAM ═══════════════ -->
+  <section class="section team" id="team">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-tag">&lt;team&gt;</span>
+        <h2 class="section-title">Our Team</h2>
+        <p class="section-subtitle">The people behind NEXUS — passionate about security, driven by curiosity</p>
+      </div>
+
+      <div class="team-grid" data-animate>
+        <!-- Faculty Coordinator -->
+        <div class="team-card featured">
+          <div class="team-photo-wrapper">
+            <div class="team-photo placeholder-avatar">
+              <span>DR</span>
+            </div>
+          </div>
+          <h4 class="team-name">Dr. Rajesh Kumar</h4>
+          <p class="team-role">Faculty Coordinator</p>
+          <p class="team-dept">Dept. of Computer Science</p>
+          <div class="team-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Email" title="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- President -->
+        <div class="team-card">
+          <div class="team-photo-wrapper">
+            <div class="team-photo placeholder-avatar">
+              <span>AK</span>
+            </div>
+          </div>
+          <h4 class="team-name">Arjun Kapoor</h4>
+          <p class="team-role">President</p>
+          <div class="team-socials">
+            <a href="#" class="social-link" aria-label="GitHub" title="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Vice President -->
+        <div class="team-card">
+          <div class="team-photo-wrapper">
+            <div class="team-photo placeholder-avatar">
+              <span>PS</span>
+            </div>
+          </div>
+          <h4 class="team-name">Priya Sharma</h4>
+          <p class="team-role">Vice President</p>
+          <div class="team-socials">
+            <a href="#" class="social-link" aria-label="GitHub" title="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- CTF Lead -->
+        <div class="team-card">
+          <div class="team-photo-wrapper">
+            <div class="team-photo placeholder-avatar">
+              <span>VM</span>
+            </div>
+          </div>
+          <h4 class="team-name">Vikram Mehta</h4>
+          <p class="team-role">CTF Lead</p>
+          <div class="team-socials">
+            <a href="#" class="social-link" aria-label="GitHub" title="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Workshop Lead -->
+        <div class="team-card">
+          <div class="team-photo-wrapper">
+            <div class="team-photo placeholder-avatar">
+              <span>NR</span>
+            </div>
+          </div>
+          <h4 class="team-name">Neha Reddy</h4>
+          <p class="team-role">Workshop Lead</p>
+          <div class="team-socials">
+            <a href="#" class="social-link" aria-label="GitHub" title="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Design Lead -->
+        <div class="team-card">
+          <div class="team-photo-wrapper">
+            <div class="team-photo placeholder-avatar">
+              <span>SA</span>
+            </div>
+          </div>
+          <h4 class="team-name">Sneha Agrawal</h4>
+          <p class="team-role">Design &amp; PR Lead</p>
+          <div class="team-socials">
+            <a href="#" class="social-link" aria-label="GitHub" title="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ GALLERY ═══════════════ -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-tag">&lt;gallery&gt;</span>
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-subtitle">Snapshots from our events, workshops, and competitions</p>
+      </div>
+
+      <div class="gallery-grid" data-animate>
+        <div class="gallery-item large">
+          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #0f62fe 0%, #00d4ff 100%);">
+            <span class="gallery-label">🏆 CyberStorm 2025 — Grand Finale</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #1a1a2e 0%, #0f62fe 100%);">
+            <span class="gallery-label">🎤 Guest Lecture — Ethical Hacking</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #0a0e17 0%, #39ff14 100%);">
+            <span class="gallery-label">💻 CTF War Room</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #16213e 0%, #00d4ff 100%);">
+            <span class="gallery-label">🛠️ Workshop — Web Security</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #0f62fe 0%, #39ff14 100%);">
+            <span class="gallery-label">🤝 Team Building Meetup</span>
+          </div>
+        </div>
+        <div class="gallery-item large">
+          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #0a0e17 0%, #0f62fe 100%);">
+            <span class="gallery-label">🎯 NEXUS CTF v3.0 — Live Scoreboard</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ JOIN US ═══════════════ -->
+  <section class="section join" id="join">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-tag">&lt;recruit&gt;</span>
+        <h2 class="section-title">Join IBM NEXUS</h2>
+        <p class="section-subtitle">Ready to hack? Fill out the form and we'll reach out to you.</p>
+      </div>
+
+      <div class="join-wrapper" data-animate>
+        <div class="join-info">
+          <h3>Why Join?</h3>
+          <ul class="join-perks">
+            <li>
+              <span class="perk-icon">🔓</span>
+              <div>
+                <strong>Exclusive Access</strong>
+                <p>Private CTF practice platforms and lab environments</p>
+              </div>
+            </li>
+            <li>
+              <span class="perk-icon">🏅</span>
+              <div>
+                <strong>Compete Nationally</strong>
+                <p>Represent the college in top CTF and hackathon competitions</p>
+              </div>
+            </li>
+            <li>
+              <span class="perk-icon">🧑‍🏫</span>
+              <div>
+                <strong>Mentorship</strong>
+                <p>Learn from experienced seniors and industry professionals</p>
+              </div>
+            </li>
+            <li>
+              <span class="perk-icon">📜</span>
+              <div>
+                <strong>Certifications &amp; Recognition</strong>
+                <p>Earn certificates and build a competitive portfolio</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <form class="join-form" id="joinForm">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@college.edu" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="department">Department</label>
+              <select id="department" name="department" required>
+                <option value="" disabled selected>Select Dept.</option>
+                <option value="cse">Computer Science</option>
+                <option value="it">Information Technology</option>
+                <option value="ece">Electronics &amp; Comm.</option>
+                <option value="eee">Electrical Eng.</option>
+                <option value="mech">Mechanical Eng.</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="year">Year</label>
+              <select id="year" name="year" required>
+                <option value="" disabled selected>Select Year</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="interest">Area of Interest</label>
+            <select id="interest" name="interest" required>
+              <option value="" disabled selected>Choose your track</option>
+              <option value="offensive">🗡️ Offensive Security (Red Team)</option>
+              <option value="defensive">🛡️ Defensive Security (Blue Team)</option>
+              <option value="dev">💻 Security Development</option>
+              <option value="general">🌐 General / Exploring</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span class="btn-icon">🚀</span> Submit Application
+          </button>
+          <p class="form-note">We'll review your application and get back to you within 48 hours.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo">
+            <span class="logo-bracket">[</span>IBM<span class="logo-accent"> NEXUS</span><span class="logo-bracket">]</span>
+          </a>
+          <p class="footer-desc">The cybersecurity and innovation club of our college. Building the next generation of security professionals.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Instagram" title="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Discord" title="Discord">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="GitHub" title="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#leaderboard">CTF Leaderboard</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#join">Join Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">CTF Writeups</a></li>
+            <li><a href="#">Practice Labs</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Learning Path</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>📧 nexus@college.edu</p>
+          <p>📍 Department of Computer Science</p>
+          <p>🏫 XYZ College of Engineering</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 IBM NEXUS. All rights reserved.</p>
+        <p class="footer-credit">Designed with 💙 by the NEXUS dev team</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <span class="toast-icon">✅</span>
+    <span class="toast-msg">Application submitted successfully!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
